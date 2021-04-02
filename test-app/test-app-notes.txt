@@ -1,0 +1,30 @@
+--sometimes the name of an ingredient doesn't match exactly between
+  the "ingredients/search" and "ingredients/:id/information" calls, even though
+  the same ingredient id is referenced. For example, "oatmeal" becomes "oat porridge"
+  in the second call.
+
+--other than "serving", the array values in the "possibleUnits" property vary between ingredients, so we will need to fill
+  the dropdown values dynamically after the first call to info.
+
+--if you make the information call without "unit" and "amount" parameters in the query string,
+  you will get the "possibleUnits" values back, but none of the nutrition values. Because of this,
+  I think we should have first call to info have "serving" and 1 respectively as the default params.
+
+--also, since some queries return nothing, I think the saving of searches should be initiated client side by the user
+  with a button or something similar after the results are displayed.
+
+--for the "recipes" call in attached to the "find alternatives" button, I have it filtering on "maxCalories" and "maxCarbs" qstring
+  params based on the result of the previous search. There are a bunch of other parameters available through that endpoint; I just
+  used those ones for the example since I didn't know if we would want to have this generated automatically based on the search,
+  tied to user input through some ui element, or included at all.
+
+--The way I have this recipes call set up in "test-app", if you run it against a result with a value of 0 for either of those
+  fields (a search on "chicken" for example), you won't get any results back. If we want to use something like this in the 
+  production application, we can set up some logic to build the query string based on which fields have non-zero values before 
+  making that fetch call.
+
+--latency with the api calls doesn't seem too bad, but i put a basic loading modal with a spinner in the main
+  search "fetch=>then" method chain as an example of how we could implement something like this for the client side
+  calls to our server routes.
+
+--don't forget: you will need to fill in your api key in script.js on line 27 before testing!
