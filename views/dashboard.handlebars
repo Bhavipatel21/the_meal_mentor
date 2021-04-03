@@ -1,0 +1,26 @@
+   <div>
+        <input id="searchBox" type="text">
+        <button id="searchBtn" >Search Ingredients</button>
+    </div>
+    <div class="sectionContainer">
+        <table id="resultsTable">
+
+        </table>
+    </div>
+    <div>
+        <label for="#amountBox">Amount</label>
+        <input id="amountBox">
+        <label for="#unitOptions">UM</label>
+        <select id="unitOptions">
+            <option value="serving" selected="selected">serving</option>
+        </select>
+        <button id="refineSearchBtn">Search by Amount</button>
+        <button id="altSearchBtn">Search for alternatives</button>
+    </div>
+ <!-- loading modal -->
+    <div id="modal">
+        <div id="modalContent">
+            <p>Loading...</p>
+            <div class="loader"></div>
+        </div>
+    </div>
