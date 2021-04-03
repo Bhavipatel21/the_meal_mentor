@@ -36,39 +36,39 @@ NutritionInfo.init(
             allowNull: false,
         },
         calories: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         sugar: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         cholesterol: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         transfat: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         fat: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         fiber: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         carbs: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         protien: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         },
         sodium: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4,2),
             allowNull: true,
         }
     },
