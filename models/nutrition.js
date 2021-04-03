@@ -35,6 +35,42 @@ NutritionInfo.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        calories: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        sugar: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        cholesterol: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        transfat: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        fat: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        fiber: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        carbs: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        protien: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        sodium: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        }
     },
     {
         sequelize,
