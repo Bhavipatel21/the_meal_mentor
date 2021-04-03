@@ -1,4 +1,4 @@
-Ingredients.init(
+Ingredient.init(
     {
         id: {
             type: DataTypes.INTEGER,
