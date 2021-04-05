@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3012;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: '',
+  secret: 'secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
