@@ -48,7 +48,7 @@ router.delete("/:id", async (req, res) => {
         userId: req.session.userId,
       },
     });
-    if (foodData) {
+    if (!foodData) {
       res.status(404).json({ message: "no ingredient found with this id" });
       return;
     }
