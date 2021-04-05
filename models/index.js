@@ -1,5 +1,5 @@
 const User = require('./user');
-const NutriInfo = require('./nutrition');
+const NutriInfo = require('./nutritionInfo');
 const Ingredient = require('./ingredient');
 
 User.hasMany(Ingredient, {
