@@ -9,7 +9,7 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Meal Mentor</title>
   </head>
@@ -30,36 +30,33 @@
         <div class="row">
           <!--Information/Search-->
           <div class="col-md-6">
-            <h2>How does this work!?</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              rhoncus mollis nibh, eu aliquam magna eleifend in. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Praesent diam ex, pretium ut nisi eu, laoreet
-              lacinia eros. Etiam lacinia lorem erat, ac hendrerit metus congue
-              eu. Nulla tristique a augue eu suscipit. Etiam molestie pretium
-              turpis vel ultrices. Quisque non ante non massa pharetra dictum ut
-              volutpat turpis.
-            </p>
+              <h2>How does this work!?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus mollis nibh, eu aliquam magna eleifend in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent diam ex, pretium ut nisi eu, laoreet lacinia eros. Etiam lacinia lorem erat, ac hendrerit metus congue eu. Nulla tristique a augue eu suscipit. Etiam molestie pretium turpis vel ultrices. Quisque non ante non massa pharetra dictum ut volutpat turpis.</p>
           </div>
           <!-- Login/Signup Form -->
           <div class="col-md-6">
-            <div class="login-form">
-              <form>
-                  <h2 class="text-center">Log in</h2>       
+            <div class="row">
+              <div class="col-md-6">
+                <h2>Login</h2>
+                <form class="form login-form">
                   <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Username" required="required">
+                    <label for="email-login">email:</label>
+                    <input class="form-input" type="text" id="email-login" />
                   </div>
                   <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" required="required">
+                    <label for="password-login">password:</label>
+                    <input
+                      class="form-input"
+                      type="password"
+                      id="password-login"
+                    />
                   </div>
                   <div class="form-group">
-                      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                    <button class="btn btn-primary" type="submit">login</button>
                   </div>
-       
-              </form>
-              <p class="text-center"><a href="/signup">Create an Account</a></p>
-          </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>

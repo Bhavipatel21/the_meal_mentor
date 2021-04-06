@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// LOG IN 
+// LOG IN
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -50,7 +50,7 @@ router.post("/login", async (req, res) => {
     res.status(400).json(err);
   }
 });
-// LOG OUT IF LOGGED IF
+// LOG OUT IF LOGGED IN
 router.post("/logout", withAuth, (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
