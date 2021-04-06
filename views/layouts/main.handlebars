@@ -12,6 +12,9 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./script.js"></script>
+        {{#if logged_in}}
+  <script defer src="/js/logout.js"></script>
+  {{/if}}
     <title>meal mentor outline</title>
 </head>
   <body>
@@ -19,9 +22,11 @@
     <div class="container-fluid">
       <header>
         <h1><a href="/">The Meal Mentor</a></h1>
+        {{#if logged_in}}
         <nav>
-          <a href="/profile">Profile</a> 
+          <a href="/dashboard">Dashboard</a> 
           <button class="no-button" id="logout">Logout</button>
+          {{/if}}
         </nav>
       </header>
     </div>
