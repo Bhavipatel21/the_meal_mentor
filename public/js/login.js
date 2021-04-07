@@ -13,7 +13,6 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-    console.log('-------------------here????---------------');
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       console.log('redirect now')

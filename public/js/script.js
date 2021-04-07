@@ -24,7 +24,7 @@ let ingredientId;
 let amount = 1;
 let selectedUnit = "serving";
 
-const apiKey = "YOUR_API_KEY_HERE";
+const apiKey = "bfe5bee48b474ce2a73695873d8fa666";
 
 window.onload = function () {
   searchBox = document.querySelector("#searchBox");
