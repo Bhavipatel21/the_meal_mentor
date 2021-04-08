@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { NutriInfo, Ingredient } = require("../../models");
+const { NutriInfo } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 

@@ -11,6 +11,21 @@ NutriInfo.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -51,13 +66,6 @@ NutriInfo.init(
       type: DataTypes.DECIMAL(4, 2),
       allowNull: true,
     },
-    food_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'Ingredient',
-        key: 'id',
-      },
-    },
   },
   {
     sequelize,
@@ -67,5 +75,6 @@ NutriInfo.init(
     modelName: 'NutriInfo',
   },
 );
+
 
 module.exports = NutriInfo;
