@@ -13,14 +13,15 @@ NutriInfo.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
+      allowNull: true,
+    }, 
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id',
@@ -66,6 +67,8 @@ NutriInfo.init(
       type: DataTypes.DECIMAL(4, 2),
       allowNull: true,
     },
+
+  
   },
   {
     sequelize,
