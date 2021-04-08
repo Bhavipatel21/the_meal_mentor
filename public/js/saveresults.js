@@ -7,9 +7,8 @@ const saveHandler = async (event) => {
 
 	for (let i = 0; i < cells.length; i += 16) {
 		nutrition = {
-			name: "",
-			image: "",
-			user_id: 0,
+		  name: "",
+			image: "", 
 			title: cells[1 + i].textContent,
 			calories: parseFloat(cells[7 + i].textContent),
 			sugar: parseFloat(cells[8 + i].textContent),
@@ -23,7 +22,23 @@ const saveHandler = async (event) => {
 		}		
 	}
 
-	console.log(nutrition);
+  if (nutrition) {
+    console.log('any inpit', nutrition);
+
+    const response = await fetch('/api/nutritionInfo', {
+        method: 'POST',
+        body: JSON.stringify({ nutrition }),
+        headers: {
+            'Content-type': 'application/json'
+        },
+    });
+if (response.ok) {
+    document.location.replace('/dashboard');
+}   else {
+    alert('Failed to create post');
+}
+}
+
 
 };
 

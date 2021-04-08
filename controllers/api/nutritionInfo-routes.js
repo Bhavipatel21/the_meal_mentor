@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
+});
 // GET ONE NUTRITIONINFO BY ID
 router.get("/:id", withAuth, async (req, res) => {
   try {
@@ -28,9 +28,12 @@ router.get("/:id", withAuth, async (req, res) => {
 
 // SAVE NEW NUTRITIONINFO TO DATA BASE
 router.post("/", async (req, res) => {
+  const body = req.body
+  console.log(body.nutrition);
   try {
     const newNutritionInfo = await NutriInfo.create({
-      ...req.body,
+      ...body.nutrition,
+      user_id: req.session.user_id
     });
     res.status(200).json(newNutritionInfo);
   } catch (err) {
