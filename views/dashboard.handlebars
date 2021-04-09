@@ -1,33 +1,39 @@
+<main class="dashbord-main">
+    <div class="container">
+    
+           <div>
+                <input id="searchBox" type="text">
+                <button id="searchBtn" >Search Ingredients</button>
+            </div>
+            <div class="sectionContainer">
+    
+                <table id="resultsTable">
+    
+                </table>
+            </div>
+            <div>
+                <label class="formlabel" for="#amountBox">Amount</label>
+                <input id="amountBox">
+                <label class="formlabel" for="#unitOptions">UM</label>
+                <select id="unitOptions">
+                    <option value="serving" selected="selected">serving</option>
+                </select>
+                <button id="refineSearchBtn">Search by Amount</button>
+                {{!-- <button id="altSearchBtn">Search for alternatives</button> --}}
+                <button id="saveResults">Save Results</button>
+            </div>
+    
+         <!-- loading modal -->
+            <div id="modal">
+                <div id="modalContent">
+                    <p>Loading...</p>
+                    <div class="loader"></div>
+                </div>
+            </div>
+        {{>searchbox}}
+    </div>
+</main>
 
-   <div>
-        <input id="searchBox" type="text">
-        <button id="searchBtn" >Search Ingredients</button>
-    </div>
-    <div class="sectionContainer">
-        
-        <table id="resultsTable">
-
-        </table>
-    </div>
-    <div>
-        <label for="#amountBox">Amount</label>
-        <input id="amountBox">
-        <label for="#unitOptions">UM</label>
-        <select id="unitOptions">
-            <option value="serving" selected="selected">serving</option>
-        </select>
-        <button id="refineSearchBtn">Search by Amount</button>
-        <button id="altSearchBtn">Search for alternatives</button>
-        <button id="saveResults">Save Results</button>
-    </div>
-
- <!-- loading modal -->
-    <div id="modal">
-        <div id="modalContent">
-            <p>Loading...</p>
-            <div class="loader"></div>
-        </div>
-    </div>
 <script src="/js/logout.js"></script>
 <script src="/js/script.js"></script>
 <script src="/js/saveresults.js"></script>
