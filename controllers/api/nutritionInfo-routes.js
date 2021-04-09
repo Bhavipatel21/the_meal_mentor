@@ -1,12 +1,12 @@
 const router = require("express").Router();
-const { NutriInfo } = require("../../models");
+const { NutriInfo, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 
 // GET ALL NUTRITIONINFO RECORDS
 router.get("/", async (req, res) => {
   try {
-    const nutritionInfo = await NutriInfo.findAll();
+    const nutritionInfo = await NutriInfo.findAll({include: User});
     res.status(200).json(nutritionInfo);
   } catch (err) {
     res.status(500).json(err);

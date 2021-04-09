@@ -1,0 +1,20 @@
+      <div class="container savebox-container">
+        <div class="row">
+          <!--Information about Saved Searches-->
+          <div id="save-info"class="col-md-6">
+              <h2>How does this work!?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus mollis nibh, eu aliquam magna eleifend in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent diam ex, pretium ut nisi eu, laoreet lacinia eros. Etiam lacinia lorem erat, ac hendrerit metus congue eu. Nulla tristique a augue eu suscipit. Etiam molestie pretium turpis vel ultrices. Quisque non ante non massa pharetra dictum ut volutpat turpis.</p>
+          </div>
+          <!-- Display Saved Searches-->
+          <div id="history"class="col-md-6">
+
+                <div><h3>Search History</h3></div>
+                        {{#each searchedFoods}}
+        <div>
+            
+          <p><a href="/nutrition/{{id}}">{{title}}</a></p>
+        </div>
+        {{/each}}
+          </div>
+        </div>
+      </div>

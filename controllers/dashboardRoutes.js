@@ -10,14 +10,15 @@ router.get("/", withAuth, async (req, res) => {
       },
     });
     const searchedFoods = foodData.map((food) => food.get({ plain: true }));
-    console.log('hey------', searchedFoods)
+    console.log('hey------its in dashbord routues', searchedFoods)
     res.render('dashboard', {
-      ...searchedFoods,
+      searchedFoods,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+// Get an Ingredient Nutriuents 
 
 module.exports = router;

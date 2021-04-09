@@ -1,13 +1,4 @@
-/* table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    display: none;
-  } */
-  .hide-table{
-    display: none;
-  }
-  
+/* -- Table CSS -- */
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -29,9 +20,9 @@
   }
 
   .siteBody {
-      height: 100%;
+      min-height: 100vh;
       width: 100%;
-      background-color: whitesmoke;
+      background-color: #b2dec6;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: navy;
   }
@@ -44,8 +35,11 @@
       border: 1px solid gray;
       box-shadow: 1px 2px 2px 1px lightslategray;
       display: flex;
+      overflow: auto;
   }
-
+  .formlabel{
+      color: whitesmoke;
+  }
   #modal {
       display: none;
       position: fixed;
@@ -90,32 +84,176 @@
       100% { transform: rotate(360deg); }
   }
 
+/* Nav Bar */
 
+.brand{
+    font-family: 'Oswald', sans-serif;
+}
+#nav-header{
+    background-color: #05386b;
+    padding: 10px
+}
+a#logo-link {
+    color: #e9c46a;
+}
+    a#logo-link:hover {
+        color: #f4f4f4;
+    }
 
+/* -- Home Page Css */
+#home-container {
+    margin-top: 20px;
+    margin-bottom: auto;
+    padding-top: 20px;
+}
+.center-home {
+    align-items: center;
+}
+main {
+    background-color: #b2dec6;
+    height: 100vh;
+}
+main .dashbord-main {
+    background-color: #05386b;
+}
+.savebox-container{
+    background-color: #cfeddd;
+    margin: 20px
+}
 
 /* LOG IN FORM CSS */
 .login-form {
     width: 340px;
     margin: 50px auto;
   	font-size: 15px;
+    
 }
 .login-form form {
     margin-bottom: 15px;
-    background: #f7f7f7;
+    background: #05386b;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
+    border-radius: 15px;
 }
 .login-form h2 {
     margin: 0 0 15px;
+    color: white;
 }
 .form-control, .btn {
     min-height: 38px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
-.btn {        
+.form-group .btn {        
     font-size: 15px;
     font-weight: bold;
+    background-color: #e9c46a;
+    color: #05386b;
+    
+}
+.form-group .btn:hover{
+    background-color: white;
+    color: #05386b;
 }
 .form-group {
     margin: 15px;
 }
+/* DASH BOARD * */
+.digits {
+    font-size: 28px;
+}
+
+.box {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  /* Your container needs a fixed height, and it 
+   * needs to be taller than your tallest column. */
+   height: 665px;
+  
+   /* Optional */
+   background-color: #064583;
+   border-radius: 3px;
+   padding: 20px;
+   width: 60%;
+   margin: 40px auto;
+   border: 1px solid #4290e2;
+
+ 
+   counter-reset: items;
+ }
+ 
+ .item {
+   width: 32%;
+   /* Optional */
+   position: relative;
+   margin-bottom: 2%;
+   border-radius: 5px;
+   background-color: #05386b;
+   border: 1px solid #4290e2;
+   box-shadow: 0 2px 2px rgba(0,90,250,0.05),
+     0 4px 4px rgba(0,90,250,0.05),
+     0 8px 8px rgba(0,90,250,0.05),
+     0 16px 16px rgba(0,90,250,0.05);
+   color: #fff;
+   padding: 15px;
+   box-sizing: border-box;
+ }
+/*  
+  .item::before {
+   counter-increment: items;
+   content: counter(items);
+ } 
+  */
+/* Re-order items into 3 rows  */
+ .item:nth-child(3n+1) { order: 1; }
+ .item:nth-child(3n+2) { order: 2; }
+ .item:nth-child(3n)   { order: 3; }
+ 
+ .item:nth-child(1) { 
+   height: 140px; 
+   }
+ .item:nth-child(2) { 
+   height: 190px; 
+   }
+ .item:nth-child(3) { 
+   height: 170px; 
+   }
+ .item:nth-child(4) { 
+   height: 120px"; 
+   }
+ .item:nth-child(5) { 
+   height: 160px; 
+   }
+ .item:nth-child(6) { 
+   height: 180px; 
+   }
+ .item:nth-child(7) { 
+   height: 140px; 
+   }
+ .item:nth-child(8) { 
+   height: 150px; 
+   }
+ .item:nth-child(9) { 
+   height: 170px; 
+   }
+ .item:nth-child(10) { 
+   height: 150px; 
+   }
+ 
+/* Force new columns */ 
+ .mosaic::before,
+ .mosaic::after {
+   content: "";
+   flex-basis: 100%;
+   width: 0;
+   order: 2;
+ }
+ 
+ body { 
+   font-family: sans-serif; 
+   width: 100%; 
+   }
+.dash{
+   width: 100%;
+ }
+ h3 { text-align: center; } 
