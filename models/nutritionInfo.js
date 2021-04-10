@@ -67,8 +67,6 @@ NutriInfo.init(
       type: DataTypes.DECIMAL(4, 2),
       allowNull: true,
     },
-
-  
   },
   {
     sequelize,
