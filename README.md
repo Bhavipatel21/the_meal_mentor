@@ -4,6 +4,7 @@ The Meal Mentor
 
 ## User Story
 
+As a fitness user I would like to have an application which can help me calculate and provide nutritional information about food intake which can assist in meal planning.
 
 ## Installation Instructions
 
