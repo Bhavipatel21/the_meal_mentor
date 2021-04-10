@@ -182,11 +182,6 @@ main .dashbord-main {
    width: 60%;
    margin: 40px auto;
    border: 1px solid #4290e2;
-   display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-
- 
    counter-reset: items;
  }
  
@@ -206,6 +201,7 @@ main .dashbord-main {
   color: #fff;
    padding: 15px;
    box-sizing: border-box;
+   text-transform: capitalize;
  }
 /*  
   .item::before {
@@ -219,10 +215,10 @@ main .dashbord-main {
  .item:nth-child(3n)   { order: 3; }
  
  .item:nth-child(1) { 
-   height: 140px; 
+   height: 120px; 
    }
  .item:nth-child(2) { 
-   height: 190px; 
+   height: 150px; 
    }
  .item:nth-child(3) { 
    height: 170px; 
@@ -246,7 +242,7 @@ main .dashbord-main {
    height: 170px; 
    }
  .item:nth-child(10) { 
-   height: 150px; 
+   height: 120px; 
    }
  
 /* Force new columns */ 
@@ -254,7 +250,7 @@ main .dashbord-main {
  .mosaic::after {
    content: "";
    flex-basis: 100%;
-   width: 0;
+   width: 3;
    order: 2;
  }
  
@@ -272,7 +268,6 @@ main .dashbord-main {
   background-image: url("../assets/healthyfood.jpg");
 
   /* Full height */
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
