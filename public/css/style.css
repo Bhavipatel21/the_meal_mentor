@@ -22,7 +22,7 @@
   .siteBody {
       min-height: 100vh;
       width: 100%;
-      background-color: #b2dec6;
+      background-color: #cfeddd;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: navy;
   }
@@ -110,7 +110,7 @@ a#logo-link {
     align-items: center;
 }
 main {
-    background-color: #b2dec6;
+    background-color: #cfeddd;
     height: 100vh;
 }
 main .dashbord-main {
@@ -159,7 +159,10 @@ main .dashbord-main {
 }
 /* DASH BOARD * */
 .digits {
-    font-size: 28px;
+    font-size: 36px;
+    text-shadow: 2px 2px 8px #e9c46a;
+    ;
+    text-transform: capitalize;
 }
 
 .box {
@@ -171,18 +174,18 @@ main .dashbord-main {
    height: 665px;
   
    /* Optional */
-   background-color: #064583;
-   border-radius: 3px;
    padding: 20px;
    width: 60%;
    margin: 40px auto;
-   border: 1px solid #4290e2;
 
  
    counter-reset: items;
  }
  
  .item {
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
    width: 32%;
    /* Optional */
    position: relative;
@@ -190,10 +193,10 @@ main .dashbord-main {
    border-radius: 5px;
    background-color: #05386b;
    border: 1px solid #4290e2;
-   box-shadow: 0 2px 2px rgba(0,90,250,0.05),
-     0 4px 4px rgba(0,90,250,0.05),
-     0 8px 8px rgba(0,90,250,0.05),
-     0 16px 16px rgba(0,90,250,0.05);
+   box-shadow: 2px 2px 8px rgba(0,90,250,0.05),
+   2px 4px 8px rgba(0,90,250,0.05),
+   2px 8px 8px rgba(0,90,250,0.05),
+   2px 16px 16px rgba(0,90,250,0.05);
    color: #fff;
    padding: 15px;
    box-sizing: border-box;
@@ -256,4 +259,5 @@ main .dashbord-main {
 .dash{
    width: 100%;
  }
+ 
  h3 { text-align: center; } 

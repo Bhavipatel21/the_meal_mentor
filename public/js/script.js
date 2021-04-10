@@ -97,6 +97,8 @@ window.onload = function () {
   });
 
   refineSearchBtn.addEventListener("click", function () {
+    amountBox = document.querySelector("#amountBox");
+    amount = amountBox.value.trim();
     //validation
     if (
       isNaN(amountBox.value) ||
@@ -110,6 +112,8 @@ window.onload = function () {
     }
     amount = parseInt(amountBox.value);
     selectedUnit = unitOptions.value;
+    console.log(selectedUnit, amount, 'unites should change')
+    
     //call ingredientDetail api with um params
     fetch(
       `https://api.spoonacular.com/food/ingredients/${ingredientId}/information?amount=${amount}&unit=${selectedUnit}&apiKey=${apiKey}`,
@@ -119,12 +123,13 @@ window.onload = function () {
         return response.json();
       })
       .then(function (data) {
-        //console.log(JSON.stringify(data));
+        console.log(JSON.stringify(data));
         apiResults = [];
         apiResults.push(data);
+        console.log(apiResults)
         firstApiResult = data;
 
-        const searchResult = new SearchResult(data);
+        const searchResult = new SearchResult(apiResults);
         const tblMarkup = generateTable([searchResult]);
         resultsTable.innerHTML = tblMarkup;
       })
@@ -156,6 +161,7 @@ window.onload = function () {
 
 // table object (flattens info api result)
 class SearchResult {
+
   constructor(ingredientResult) {
     this.ingredientId = ingredientResult.id;
     this.name = ingredientResult.name;
@@ -166,7 +172,7 @@ class SearchResult {
       this.percentProtein = caloricBreakdown.percentProtein;
       this.percentFat = caloricBreakdown.percentFat;
       this.percentCarbs = caloricBreakdown.percentCarbs;
-    } else {
+    } if(caloricBreakdown === undefined) {
       this.percentProtein = 0;
       this.percentFat = 0;
       this.percentCarbs = 0;
