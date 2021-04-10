@@ -25,7 +25,7 @@ const saveHandler = async (event) => {
   if (nutrition) {
     console.log('any inpit', nutrition);
 
-    const response = await fetch('/api/nutritionInfo', {
+    const response = await fetch('/api/nutrition', {
         method: 'POST',
         body: JSON.stringify({ nutrition }),
         headers: {
