@@ -257,3 +257,24 @@ main .dashbord-main {
    width: 100%;
  }
  h3 { text-align: center; } 
+
+ .bg {
+  /* The image used */
+  background-image: url("../assets/healthyfood.jpg");
+
+  /* Full height */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#MYD {
+  color: white;
+  text-align: right;
+  font-weight: bold;
+  padding: 100px;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: black;
+}

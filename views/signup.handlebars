@@ -1,25 +1,109 @@
-<div class="row">
-    <!-- Login/Signup Form -->
-    <div class="col-md-12">
-        <h2>Sign Up</h2>
+{{!-- <section class="row"> --}}
+  <!-- Login/Signup Form -->
+  {{!-- <section class="col-md-12">
+    <h2>Sign Up</h2>
     <form class="form signup-form">
-      <div class="form-group">
+      <section class="form-group">
         <label for="name-signup">name:</label>
         <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
+      </section>
+      <section class="form-group">
         <label for="email-signup">email:</label>
         <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
+      </section>
+      <section class="form-group">
         <label for="password-signup">password:</label>
         <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
+      </section>
+      <section class="form-group">
         <button class="btn btn-primary" type="submit">signup</button>
-      </div>
+      </section>
     </form>
-    </div>
-</div>
+  </section>
+</section>
+--}}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--webpage title-->
+  <title> Signup </title>
+ 
+  <!--bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!--font awesome kit-->
+  <script src="https://kit.fontawesome.com/e9b8e84ab6.js"></script>
+</head>
+
+
+  <!--main layout-->
+  <main style="flex: 1 1 auto;" class="container-fluid flex-fill">
+
+    <section class="container bg-cover p-2"
+      style="margin-top:10px; margin-bottom: 90px; background:white center center;">
+
+      <section class="bg">
+        <section id="MYD">
+          <h1>The Meal Mentor </h1>
+        </section>
+      </section>
+
+      <!--row 1-->
+
+      <hr>
+      <section class="row">
+        <section class="col">
+
+          <section class="card p-2 m-4">
+            <section class="card-body">
+
+              <!--name-->
+              <section class="row gx-5 mb-3">
+                <section class="col">
+                  <label for="name-signup" class="form-label">Name</label>
+                  <input type="email" class="form-control form-input" id="name-signup" placeholder="name" />
+                </section>
+              </section>
+
+              <!--email-->
+              <section class="row gx-5 mb-3">
+                    <form class="form signup-form">
+                <section class="col">
+                  <label for="email-signup" class="form-label">Email</label>
+                  <input type="email" class="form-control form-input" id="email-signup" placeholder="email" />
+                </section>
+              </section>
+
+              <!--password-->
+            <section class="row gx-5 mb-3">
+                <section class="col">
+                    <label for="password-signup" class="col-sm-2 col-form-label">Password</label>
+                    <input type="password" class="form-control form-input" id="password-signup">
+                </section>
+            </section>
+             <!--button-->
+            <section class="col-12 ml-1 p-2">
+               <section class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </section>
+            </section>
+
+  
+
+</section> <!--main card-->
+</section> <!--card-body -->
+
+        </section><!--col-->
+        </section><!--row-->
+
+
+
+
+
+  </main>
+</body>
+<!--SCRIPT-->
 
 <script src="./js/signup.js"></script>
